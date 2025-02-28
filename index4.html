@@ -20,12 +20,14 @@
 
 <body>
     <nav class="navbar-default">
-        <img class="navbar-header-image" src="assets/izmedju_svetova_header.png" alt="">
-        <button type="button" class="btn btn-lg"
-            style="background-color: #23438b; color:#cbbba2; font-size: 20px; padding-right: 20px;"
-            data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <img class="navbar-header-image" src="assets/izmedju_svetova_header.png" alt="" style="">
+        <button type="button" class="btn btn-sm" style="    background-color: #23438b;
+            color: #cbbba2;
+            font-size: 15px;
+            padding: 1px 7px;" data-bs-toggle="modal" data-bs-target="#exampleModal">
             KUPITE KNJIGU
         </button>
+
     </nav>
 
     <div id="mainContainer" class="container-fluid py-4" style="background-color: #272b2e;">
@@ -51,9 +53,9 @@
                 </p>
 
                 <button type="button" class="btn btn-lg mt-3"
-                    style="background-color: #23438b; color:#cbbba2; font-size: x-large; margin-bottom: 100px;"
+                    style="background-color: #cbbba2; color:#272b2e; font-size: x-large; margin-bottom: 100px;"
                     data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    KUPITE KNJIGU
+                    KAKO PORUČITI KNJIGU
                 </button>
                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                     aria-hidden="true">
@@ -61,13 +63,20 @@
                         <div class="modal-content">
                             <div class="modal-header" style="background-color: #272b2e;">
                                 <h5 class="modal-title" style="color: #cbbba2;">KAKO KUPITI KNJIGU</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
                                     aria-label="Zatvorite prozor"></button>
                             </div>
                             <div class="modal-body" style="background-color: #cbbba2;">
-                                1. Uplatite iznos za knjigu na racun fondacije Centar Zvezda<br>
-                                2. Posaljite dokaz uplate na Instagram/Mail i prilozite Vase podatke za dostavu
+                                (Uplate za knjigu se koriste u humanitarne svrhe i doniraju fondaciji Centar Srce)<br>
+                                <br>1. Uplatite minimalni iznos od 1.200 RSD.<br><br>
+                                (ili proizvoljan iznos iznad minimuma)<br> na račun broj: 160-387258-71,<br> svrha
+                                uplate:
+                                Knjiga Između Svetova<br><br>
+                                2. Pošaljite dokaz uplate na <a href="mailto:filipjankovicautor@gmail.com"
+                                    target="_blank">filipjankovicautor@gmail.com</a> i priložite Vaše podatke za dostavu
+                                i čekajte potvrdu uplate i slanja knjige na Vašu adresu.
                             </div>
+
                             <div class="modal-footer" style="background-color: #272b2e;">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
                                     style="background-color: #cbbba2; color: #272b2e;">Zatvorite prozor</button>
@@ -140,11 +149,13 @@
     }
 
     .instagram {
-        height: 47px;
+        height: 30px;
     }
 
     .mail {
-        height: 60px;
+        height: 38px;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
 
     #bookImage {
@@ -167,7 +178,8 @@
     }
 
     .navbar-header-image {
-        width: 10%;
+        width: 7%;
+        height: auto;
     }
 
     @media (max-width: 800px) {
@@ -180,7 +192,7 @@
         }
 
         nav {
-            height: 300px;
+            height: 150px;
         }
 
 
