@@ -5,12 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Filip Jankovic - Autor</title>
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Bootstrap JS (required for modal functionality) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SQ5C92XLMB"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -18,6 +14,10 @@
         gtag('js', new Date());
 
         gtag('config', 'G-SQ5C92XLMB');
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        emailjs.init("rCTqDqYLMQltUEKjm"); 
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,7 +31,6 @@
     <meta name="keywords" content="Filip Janković, autor, Između svetova, knjiga, pisanje, literatura, roman">
     <meta property="og:title" content="Filip Janković - Između svetova">
     <meta property="og:description" content="Istražite roman 'Između svetova' autora Filipa Jankovića.">
-    <meta property="og:url" content="https://yourusername.github.io/your-repo/">
     <meta property="og:type" content="website">
 
 </head>
@@ -42,7 +41,7 @@
         <button type="button" class="btn btn-sm" style="    background-color: #23438b;
             color: #cbbba2;
             font-size: 15px;
-            padding: 1px 7px;" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            padding: 1px 7px;" data-bs-toggle="modal" data-bs-target="#orderModal">
             KUPITE KNJIGU
         </button>
 
@@ -72,10 +71,10 @@
 
                 <button type="button" class="btn btn-lg mt-3"
                     style="background-color: #cbbba2; color:#272b2e; font-size: x-large; margin-bottom: 100px;"
-                    data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    data-bs-toggle="modal" data-bs-target="#orderModal">
                     KAKO PORUČITI KNJIGU
                 </button>
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel"
                     aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
@@ -85,19 +84,50 @@
                                     aria-label="Zatvorite prozor"></button>
                             </div>
                             <div class="modal-body" style="background-color: #cbbba2;">
+
                                 (Uplate za knjigu se koriste u humanitarne svrhe i doniraju fondaciji Centar Zvezda)<br>
                                 <br>1. Uplatite minimalni iznos od 1.200 RSD.<br><br>
                                 (ili proizvoljan iznos iznad minimuma)<br> na račun broj: 160-387258-71,<br> svrha
                                 uplate:
                                 Knjiga Između Svetova<br><br>
-                                2. Pošaljite dokaz uplate na <a href="mailto:filipjankovicautor@gmail.com"
-                                    target="_blank">filipjankovicautor@gmail.com</a>, priložite podatke za dostavu i
-                                sačekajte potvrdu.
-                            </div>
+                                2. Popunite formular ispod sa Vašim podacima:
+                                <hr>
+                                <div class="form">
+                                    <form id="form">
+                                        <div data-mdb-input-init class="form-outline mb-4">
+                                            <label class="form-label" for="name">Ime i prezime</label>
+                                            <input type="text" id="name" name="name" class="form-control" required />
+                                        </div>
+                                        <div data-mdb-input-init class="form-outline mb-4">
+                                            <label class="form-label" for="email">Mail adresa</label>
+                                            <input type="email" id="email" name="email" class="form-control" required />
+                                        </div>
+                                        <div data-mdb-input-init class="form-outline mb-4">
+                                            <label class="form-label" for="phone">Telefon</label>
+                                            <input type="tel" id="phone" name="phone" class="form-control" required />
+                                        </div>
+                                        <div data-mdb-input-init class="form-outline mb-4">
+                                            <label class="form-label" for="address">Adresa</label>
+                                            <input type="text" id="address" name="address" class="form-control"
+                                                required />
+                                        </div>
+                                        <div data-mdb-input-init class="form-outline mb-4">
+                                            <label class="form-label" for="notes">Napomene</label>
+                                            <input type="text" id="notes" name="notes" class="form-control" />
+                                        </div>
+                                        <div data-mdb-input-init class="form-outline mb-4">
+                                            <label class="form-label" for="copies">Broj primeraka knjige koje
+                                                naručujete</label>
+                                            <input type="number" id="copies" name="copies" class="form-control" min="1"
+                                                required />
+                                        </div>
+                                        <button type="submit" data-mdb-button-init data-mdb-ripple-init
+                                            class="btn btn-block" style="color: #cbbba2; background-color: #272b2e;">
+                                            Naruči
+                                        </button>
+                                    </form>
+                                </div>
 
-                            <div class="modal-footer" style="background-color: #272b2e;">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
-                                    style="background-color: #cbbba2; color: #272b2e;">Zatvorite prozor</button>
                             </div>
                         </div>
                     </div>
@@ -139,7 +169,8 @@
             bez roditeljskog
             staranja kroz program "Kuća mogućnosti", fokusirajući se na osamostaljenje putem smeštaja, edukacije,
             zapošljavanja i socijalne integracije. Deo svojih programa finansiraju prodajom rukotvorina, a kroz
-            radionice mladima pružaju priliku da steknu radne veštine. Njihov cilj je da mladima omoguće siguran početak
+            radionice mladima pružaju priliku da steknu radne veštine. Njihov cilj je da mladima omoguće siguran
+            početak
             samostalnog života i podršku u pronalaženju stabilnog zaposlenja.
         </p>
     </div>
@@ -268,5 +299,47 @@
         justify-content: center;
     }
 </style>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>(function () {
+        emailjs.init("rCTqDqYLMQltUEKjm");
+    })();
+
+    document.getElementById("form").addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const formData = new FormData(this);
+        const customerEmail = formData.get("email");
+        const customerName = formData.get("name");
+        const customerAddress = formData.get("address");
+        const customerPhone = formData.get("phone");
+        const customerCopiesNumber = formData.get("copies") || "Nije navedeno";
+        const customerNotes = formData.get("notes") || "Nema napomena";
+
+        const emailData = {
+            to_email: customerEmail,
+            customerName: customerName,
+            customerAddress: customerAddress,
+            customerPhone: customerPhone,
+            customerCopiesNumber: customerCopiesNumber,
+            customerNotes: customerNotes
+        };
+
+        emailjs.send("service_91yihcr", "template_oqv70nl", emailData, "rCTqDqYLMQltUEKjm")
+            .then(response => {
+                alert("Porudžbina je uspešno poslata! Potvrda je poslata na vašu email adresu.");
+                document.getElementById("form").reset();
+                let modalElement = document.getElementById("orderModal");
+                let modalInstance = bootstrap.Modal.getInstance(modalElement);
+                if (modalInstance) {
+                    modalInstance.hide();
+                }
+            })
+            .catch(error => {
+                alert("Došlo je do greške pri slanju porudžbine. Pokušajte ponovo.");
+                console.error(error);
+            });
+    });
+</script>
+
 
 </html>
