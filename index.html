@@ -113,16 +113,18 @@
                                         </div>
                                         <div data-mdb-input-init class="form-outline mb-4">
                                             <label class="form-label" for="notes">Napomene</label>
-                                            <input type="text" id="notes" name="notes" class="form-control" />
+                                            <input type="text" id="notes" name="notes" class="form-control" value="-"
+                                                style="text-align: center;" />
                                         </div>
                                         <div data-mdb-input-init class="form-outline mb-4">
                                             <label class="form-label" for="copies">Broj primeraka knjige koje
                                                 naručujete</label>
                                             <input type="number" id="copies" name="copies" class="form-control" min="1"
-                                                required />
+                                                value="1" required style="text-align: center;" />
                                         </div>
-                                        <button type="submit" data-mdb-button-init data-mdb-ripple-init
-                                            class="btn btn-block" style="color: #cbbba2; background-color: #272b2e;">
+                                        <button id="submitButton" type="submit" data-mdb-button-init
+                                            data-mdb-ripple-init class="btn btn-block"
+                                            style="color: #cbbba2; background-color: #272b2e;">
                                             Naruči
                                         </button>
                                     </form>
@@ -259,6 +261,10 @@
             gap: 20px;
         }
 
+        #orderModal,
+        #submitButton {
+            font-size: x-large;
+        }
     }
 
     @media screen and (min-width: 601px) {
