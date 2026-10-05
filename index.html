@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Filip Janković - Autor</title>
+<meta name="description" content="Zvanična web stranica Filipa Jankovića - autora knjiga 'Između svetova' i 'Između svetova: Sudbinska simfonija'. Otkrijte više o knjigama i pisanju.">
+<meta name="author" content="Filip Janković">
+<meta name="robots" content="index, follow">
+<meta name="keywords" content="Filip Janković, autor, Između svetova, Sudbinska simfonija, knjiga, pisanje, literatura, roman">
+<meta property="og:title" content="Filip Janković - Između svetova">
+<meta property="og:description" content="Istražite romane 'Između svetova' i 'Između svetova: Sudbinska simfonija' autora Filipa Jankovića.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/book2_cover_web.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&family=Roboto:wght@300;400;500&family=Roboto+Mono:wght@400;500&display=swap&subset=cyrillic,latin-ext" rel="stylesheet">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SQ5C92XLMB"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SQ5C92XLMB');</script>
+<style>
+:root{--paper:#f4eee1;--ink:#2a2118;--muted:#5a4f3f;--rule:#ddd3bd;--a1:#b1502e;--a2:#2f5d5a;}
+*{box-sizing:border-box}
+body{margin:0;font-family:'Roboto',sans-serif;background:var(--paper);color:var(--ink);min-height:100vh}
+nav{display:flex;justify-content:flex-end;padding:16px 24px;border-bottom:1px solid var(--rule)}
+.mono{font-family:'Roboto Mono',monospace}
+.btn-top{background:var(--a1);color:#fff;border:none;padding:12px 20px;min-height:44px;font:13px 'Roboto Mono',monospace;letter-spacing:.08em;cursor:pointer}
+header{text-align:center;padding:64px 24px 30px}
+.eyebrow{font:12px 'Roboto Mono',monospace;letter-spacing:.3em;text-transform:uppercase;color:var(--a1);margin-bottom:18px}
+h1{font-family:'PT Serif',serif;font-size:clamp(36px,5.5vw,58px);margin:0 0 16px}
+header p{color:var(--muted);font-size:17px;max-width:520px;margin:0 auto;line-height:1.6}
+#books{display:flex;flex-wrap:wrap;justify-content:center;gap:64px;padding:60px 24px 40px}
+.book{width:240px;display:flex;flex-direction:column;align-items:center;text-align:center}
+.book img{width:220px;height:auto;box-shadow:0 18px 40px rgba(0,0,0,.3)}
+.book .line{width:60px;height:1px;margin:28px 0 16px}
+.book .tag{font:11px 'Roboto Mono',monospace;letter-spacing:.15em;text-transform:uppercase;margin-bottom:10px}
+.book h2{font-family:'PT Serif',serif;font-size:19px;margin:0 0 20px;line-height:1.35}
+.order-link{background:none;border:none;color:var(--ink);font:14px 'Roboto Mono',monospace;letter-spacing:.04em;border-bottom:1px solid var(--ink);padding:14px 4px 3px;min-height:44px;cursor:pointer}
+.diamond{text-align:center;color:var(--a1);font-size:14px;padding:20px 0 10px}
+article{max-width:680px;margin:0 auto;padding:50px 24px 100px}
+article section{margin-bottom:56px}
+article h3{font-family:'PT Serif',serif;font-size:22px;margin:0 0 16px}
+article p{color:var(--muted);font-size:16px;line-height:1.8;margin:0}
+.sep{width:60px;height:1px;background:var(--rule);margin:0 auto 56px}
+.label{font:11px 'Roboto Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:var(--a2);margin-bottom:16px}
+.dropcap{font-family:'PT Serif',serif;font-size:52px;line-height:.7;float:left;margin:8px 8px 0 0;color:var(--ink)}
+.quote{font-family:'PT Serif',serif;font-style:italic;color:var(--ink)!important;font-size:21px!important;line-height:1.55!important;text-align:center;margin-bottom:32px!important}
+footer{border-top:1px solid var(--rule);display:flex;justify-content:space-between;align-items:center;padding:24px 44px;flex-wrap:wrap;gap:12px}
+footer .c{font:11px 'Roboto Mono',monospace;color:var(--muted);letter-spacing:.05em}
+footer .icons{display:flex;gap:20px}
+footer svg{stroke:var(--muted)}
+#modal{display:none;position:fixed;inset:0;background:rgba(30,24,16,.7);align-items:center;justify-content:center;padding:20px;z-index:50;overflow-y:auto}
+#modal.open{display:flex}
+.box{background:var(--paper);max-width:480px;width:100%;max-height:90vh;overflow-y:auto;border:1px solid var(--rule)}
+.box-head{background:var(--ink);padding:18px 24px;display:flex;align-items:center;justify-content:space-between}
+.box-head h3{color:var(--paper);font-family:'PT Serif',serif;font-size:20px;margin:0}
+.box-head button{background:none;border:none;color:var(--paper);font-size:22px;cursor:pointer;line-height:1}
+.box-body{padding:24px;font-size:15px;line-height:1.6}
+.box-body p{margin:0 0 14px}
+.box-body hr{border:0;border-top:1px solid var(--rule);margin:0 0 20px}
+.field{margin-bottom:16px}
+.field label{display:block;font-size:13px;margin-bottom:6px}
+.field input{width:100%;padding:10px;border:1px solid var(--rule);background:#fff;font:inherit}
+.field input.center{text-align:center}
+.submit{width:100%;background:var(--ink);color:var(--paper);padding:14px;border:none;font:16px 'Roboto',sans-serif;cursor:pointer}
+.submit:disabled{opacity:.6;cursor:wait}
+.author-sec{width:min(860px,100vw - 48px);position:relative;left:50%;transform:translateX(-50%)}
+.author{display:grid;grid-template-columns:300px 1fr;gap:48px;align-items:start}
+.author img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:50% 40%;box-shadow:0 18px 40px rgba(0,0,0,.25)}
+@media(max-width:720px){.author{grid-template-columns:1fr}.author img{max-width:320px;margin:0 auto}}
+@media(max-width:560px){footer{padding:24px}#books{gap:48px}}
+</style>
+</head>
+<body>
+
+<nav><button type="button" class="btn-top" onclick="document.getElementById('books').scrollIntoView({behavior:'smooth'})">КУПИТЕ КЊИГЕ</button></nav>
+
+<header>
+  <div class="eyebrow">српски писац</div>
+  <h1>Филип Јанковић</h1>
+  <p>Две књиге о душама, сећањима и границама између светова.</p>
+</header>
+
+<section id="books"></section>
+
+<div class="diamond">◆</div>
+
+<article>
+  <div id="blurbs"></div>
+  <div class="sep"></div>
+
+  <section class="author-sec">
+    <div class="author"><img src="assets/author.png" alt="Филип Јанковић"><div><div class="label">о аутору</div><p><span class="dropcap">Ф</span>илип Јанковић је млад писац чија су дела одмах привукла пажњу због своје аутентичности и дубине. Његове књиге, које су у великој мери аутобиографске, нису само књижевни рад, већ и манифест његовог личног путовања. Јанковић пише о темама које су му блиске, користећи своја искуства и учења која је стекао кроз године истраживања и интроспекције.</p></div></div>
+  </section>
+
+  <div class="sep"></div>
+
+  <section style="margin-bottom:0">
+    <div class="label">хуманитарни циљ</div>
+    <p class="quote">„Сви приходи од продаје обе књиге иду у хуманитарне сврхе, организацији Центар Звезда."</p>
+    <p>Центар Звезда у Београду, основан 2013. године, помаже деци и младима без родитељског старања кроз програм „Кућа могућности", фокусирајући се на осамостаљење путем смештаја, едукације, запошљавања и социјалне интеграције. Део својих програма финансирају продајом рукотворина, а кроз радионице младима пружају прилику да стекну радне вештине. Њихов циљ је да младима омогуће сигуран почетак самосталног живота и подршку у проналажењу стабилног запослења.</p>
+  </section>
+</article>
+
+<div id="modal">
+  <div class="box" role="dialog" aria-modal="true">
+    <div class="box-head">
+      <h3>КАКО КУПИТИ КЊИГУ</h3>
+      <button type="button" id="close" aria-label="Затворите прозор">×</button>
+    </div>
+    <div class="box-body">
+      <div id="m-title" style="font-weight:500;margin-bottom:10px"></div>
+      <p>(Уплате за књигу се користе у хуманитарне сврхе и донирају фондацији Центар Звезда)</p>
+      <p style="margin-bottom:6px">1. Уплатите минимални износ од <span id="m-price"></span>.</p>
+      <p style="margin-bottom:4px;opacity:.7">(или произвољан износ изнад минимума)</p>
+      <p style="margin-bottom:4px">на рачун број: 160-387258-71,</p>
+      <p>сврха уплате: <span id="m-purpose"></span></p>
+      <p style="font-weight:500">2. Попуните формулар испод са Вашим подацима:</p>
+      <hr>
+      <form id="order-form">
+        <div class="field"><label>Име и презиме</label><input type="text" name="name" required></div>
+        <div class="field"><label>Мејл адреса</label><input type="email" name="email" required></div>
+        <div class="field"><label>Телефон</label><input type="tel" name="phone" required></div>
+        <div class="field"><label>Адреса</label><input type="text" name="address" required></div>
+        <div class="field"><label>Напомене</label><input type="text" name="notes" value="-" class="center"></div>
+        <div class="field" style="margin-bottom:20px"><label>Број примерака књиге које наручујете</label><input type="number" name="copies" min="1" value="1" required class="center"></div>
+        <button type="submit" class="submit" id="submit">Наручи</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="c">© Филип Јанковић</div>
+  <div class="icons">
+    <a href="https://www.instagram.com/filip_jankovic122/" target="_blank" rel="noopener" aria-label="Инстаграм">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg>
+    </a>
+    <a href="mailto:filipjankovicautor@gmail.com" aria-label="Мејл">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.8"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="M3.5 6l8.5 7 8.5-7"/></svg>
+    </a>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+var EMAILJS_PUBLIC_KEY = 'u9HeAxS0Z8HVXdSlG';
+var EMAILJS_SERVICE_ID = 'service_b0kpemg';
+var EMAILJS_TEMPLATE_ID = 'template_hx8g2ai';
+
+var books = [
+  { id:'book-1', title:'Између светова', titleLatin:'Između svetova', cover:'assets/book1_cover_web.jpg',
+    tag:'роман · књига I', accent:'#b1502e', price:'1.200 RSD', purpose:'Knjiga Između Svetova',
+    blurb:'Уроните у дубље сфере постојања кроз моћне разговоре са вољенима који настављају да живе у нашим срцима... На рубу стварности, или бар онога што тако називамо, између овог света и оног који долази после, лежи тајанствени простор где се сусрећу душе које су прешле границу смрти. У овој књизи отварамо врата том невидљивом свету и позивамо вас да заједно са нама истражите дубине душе и непрегледне хоризонте онога што долази. Кроз речи које ће допрети до вашег срца, открићете да је комуникација с душама умрлих могућа, да љубав и сећања прелазе границе времена и простора, и да су душе наших вољених увек с нама, невидљиви сапутници на вашем путовању кроз живот. Ова књига није само путовање у непознато, већ и подсетник на вечну повезаност која нас све обухвата у целину.' },
+  { id:'book-2', title:'Између светова: Судбинска симфонија', titleLatin:'Između svetova: Sudbinska simfonija', cover:'assets/book2_cover_web.jpg',
+    tag:'роман · књига II', accent:'#2f5d5a', price:'1.200 RSD', purpose:'Knjiga Izmedju Svetova - Sudbinska simfonija',
+    blurb:'Симфонија сећања: унутрашњи светови, преплетени златним нитима наде, где се сећања претварају у светлост и тишину. Откријте безвремени дијалог душе, симфонију која пркоси растанку и слави вечну присутност. Ваша прича о утехи и поновном сусрету почиње овде.' }
+];
+
+var booksEl = document.getElementById('books');
+var blurbsEl = document.getElementById('blurbs');
+books.forEach(function (b) {
+  var d = document.createElement('div');
+  d.className = 'book';
+  d.innerHTML = '<img src="' + b.cover + '" alt="' + b.title + '">' +
+    '<div class="line" style="background:' + b.accent + '"></div>' +
+    '<div class="tag" style="color:' + b.accent + '">' + b.tag + '</div>' +
+    '<h2>' + b.title + '</h2>' +
+    '<button type="button" class="order-link">наручи књигу →</button>';
+  d.querySelector('button').onclick = function () { openOrder(b); };
+  booksEl.appendChild(d);
+
+  var s = document.createElement('section');
+  s.innerHTML = '<h3>' + b.title + '</h3><p>' + b.blurb + '</p>';
+  blurbsEl.appendChild(s);
+});
+
+var modal = document.getElementById('modal');
+var form = document.getElementById('order-form');
+var submitBtn = document.getElementById('submit');
+var currentBook = null;
+
+function openOrder(b) {
+  currentBook = b;
+  document.getElementById('m-title').textContent = b.title;
+  document.getElementById('m-price').textContent = b.price;
+  document.getElementById('m-purpose').textContent = b.purpose;
+  modal.classList.add('open');
+}
+function closeOrder() { modal.classList.remove('open'); }
+document.getElementById('close').onclick = closeOrder;
+modal.addEventListener('click', function (e) { if (e.target === modal) closeOrder(); });
+
+if (window.emailjs) emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+
+form.addEventListener('submit', function (e) {
+  e.preventDefault();
+  var f = new FormData(form);
+  var params = {
+    to_email: f.get('email'),
+    customerName: f.get('name'),
+    customerAddress: f.get('address'),
+    customerPhone: f.get('phone'),
+    customerCopiesNumber: f.get('copies') || 'Nije navedeno',
+    customerNotes: 'Knjiga: ' + (currentBook ? currentBook.titleLatin : '') + '. Napomene: ' + (f.get('notes') || 'Nema napomena')
+  };
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Слање...';
+  emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, params, { publicKey: EMAILJS_PUBLIC_KEY })
+    .then(function () {
+      alert('Porudžbina je uspešno poslata!');
+      form.reset();
+      form.elements.notes.value = '-';
+      form.elements.copies.value = '1';
+      closeOrder();
+    })
+    .catch(function (err) {
+      console.error(err);
+      alert('Došlo je do greške pri slanju porudžbine. Pokušajte ponovo.\n\n' + (err && (err.text || err.message) || ''));
+    })
+    .finally(function () {
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Наручи';
+    });
+});
+</script>
+</body>
+</html>
